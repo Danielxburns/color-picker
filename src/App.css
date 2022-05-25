@@ -2,7 +2,18 @@
   text-align: center;
 }
 
+.logo-container {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+
 .App-logo {
+  color: red;
   height: 40vmin;
   pointer-events: none;
 }
@@ -24,8 +35,31 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.viewer-container {
+  position: relative;
+  height: 60vmin;
+  width: 80vmin;
+  display: flex;
+}
+
+.viewer {
+  color: black;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.viewer :last-child {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.slider-container {
+  display: flex;
 }
 
 @keyframes App-logo-spin {
