@@ -1,30 +1,4 @@
 .App {
-  text-align: center;
-}
-
-.logo-container {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: white;
-}
-
-.App-logo {
-  color: red;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -33,21 +7,39 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  text-align: center;
+}
+
+.picker-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.picker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 10px;
 }
 
 .viewer-container {
-  position: relative;
-  height: 60vmin;
-  width: 80vmin;
   display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 50vmin;
+  width: 50vmin;
+  background-color: white;
 }
 
 .viewer {
   color: black;
   position: absolute;
-  z-index: 2;
+  z-index: 1;
   top: 0;
-  left: 0;
   height: 100%;
   width: 100%;
 }
@@ -56,6 +48,28 @@
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.App-logo {
+  color: red;
+  height: 40vmin;
+  margin-left: auto;
+  margin-right: auto;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
 .slider-container {
