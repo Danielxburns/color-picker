@@ -37,7 +37,7 @@ const Picker = ({ colorModel }) => {
           }}
         >
           <p>
-            background-color: {colorModel.toLowerCase()}({context.val1}, {context.val2}, {context.val3}, {context.val4})
+            background-color: {colorModel.toLowerCase()}({context.val1}, {(colorModel === 'HSLA')? context.val2 + '%': context.val2}, {(colorModel === 'HSLA')? context.val3 + '%': context.val3}, {context.val4})
           </p>
         </div>
         <div className='foreground-layer'></div>
