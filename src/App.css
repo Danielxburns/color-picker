@@ -35,7 +35,7 @@
   background-color: white;
 }
 
-.viewer {
+.viewer-layer {
   color: black;
   position: absolute;
   z-index: 1;
@@ -44,18 +44,31 @@
   width: 100%;
 }
 
-.viewer :last-child {
+.viewer-layer :last-child {
   position: absolute;
   bottom: 0;
   width: 100%;
 }
 
-.logo-container {
+.background-layer {
+  position: absolute;
+  top: 0;
   display: flex;
   justify-content: center;
   z-index: 0;
   height: 100%;
   width: 100%;
+}
+
+.foreground-layer {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  color: blue;
 }
 
 .App-logo {

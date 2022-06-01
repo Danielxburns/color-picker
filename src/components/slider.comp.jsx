@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Slider = ({ name, min, max, step, value, handlechange}) => {
+const Slider = ({ className, name, min, max, step, value, handlechange}) => {
 
   return (
     <div className="sliderWrapper">
@@ -9,6 +9,7 @@ const Slider = ({ name, min, max, step, value, handlechange}) => {
       </label>
       <input
         type="range"
+        className={className}
         id={name}
         name={name}
         min={min}
