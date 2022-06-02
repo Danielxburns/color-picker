@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color:burlywood;
   text-align: center;
 }
 
@@ -22,7 +22,7 @@
   align-items: center;
   margin: 5px;
   padding: 10px;
-  border: 2px solid white;
+  border: 2px solid burlywood;
   border-radius: 10px;
 }
 
@@ -33,6 +33,17 @@
   height: 50vmin;
   width: 50vmin;
   background-color: white;
+}
+
+
+.background-layer {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .viewer-layer {
@@ -48,17 +59,9 @@
   position: absolute;
   bottom: 0;
   width: 100%;
+  font-size: calc(10px + 1vmin);
 }
 
-.background-layer {
-  position: absolute;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  z-index: 0;
-  height: 100%;
-  width: 100%;
-}
 
 .foreground-layer {
   position: absolute;
@@ -69,6 +72,11 @@
   height: 100%;
   width: 100%;
   color: blue;
+}
+
+.slider-container {
+  display: flex;
+  font-size: calc(10px + 1vmin);
 }
 
 .App-logo {
@@ -83,10 +91,6 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.slider-container {
-  display: flex;
 }
 
 @keyframes App-logo-spin {

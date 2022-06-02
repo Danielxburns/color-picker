@@ -15,7 +15,7 @@ const Slider = ({ className, name, min, max, step, value, handlechange}) => {
         min={min}
         max={max}
         step={step}
-        value={value}
+        value={parseFloat(value)}
         onChange={handlechange}
       ></input>
       <div id={name + 'Val'}>

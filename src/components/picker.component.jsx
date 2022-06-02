@@ -14,15 +14,12 @@ const Picker = ({ colorModel }) => {
 
   const handleChange = (e) => {
     const { className, value } = e.target;
-    console.log(className, value);
     const setter = `setV${className.slice(1)}`;
-    console.log('setter :>> ', setter);
     context[setter](value);
-    // update the background color of the viewer element
   };
 
-  console.log(`${colorModel} context :>> `, context);
-
+/*   console.log(`${colorModel} context :>> `, context);
+ */
   return (
     <div className="picker">
       {colorModel} color
@@ -56,7 +53,7 @@ const Picker = ({ colorModel }) => {
           name={`${context.valNames[1]}`}
           min="0"
           max={`${context.maxVals[1]}`}
-          value={context.val2}
+          value={(colorModel === 'HSLA')? context.val2 + '%': context.val2}
           handlechange={handleChange}
         ></Slider>
         <Slider
@@ -64,7 +61,7 @@ const Picker = ({ colorModel }) => {
           name={`${context.valNames[2]}`}
           min="0"
           max={`${context.maxVals[2]}`}
-          value={context.val3}
+          value={(colorModel === 'HSLA')? context.val3 + '%': context.val3}
           handlechange={handleChange}
         ></Slider>
         <Slider
