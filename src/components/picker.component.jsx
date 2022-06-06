@@ -18,8 +18,6 @@ const Picker = ({ colorModel }) => {
     context[setter](value);
   };
 
-/*   console.log(`${colorModel} context :>> `, context);
- */
   return (
     <div className="picker">
       {colorModel} color
@@ -39,7 +37,7 @@ const Picker = ({ colorModel }) => {
         </div>
         <div className='foreground-layer'></div>
       </div>
-      <div className="slider-container">
+      <div className="sliders-container">
         <Slider
           className="val1"
           name={`${context.valNames[0]}`}

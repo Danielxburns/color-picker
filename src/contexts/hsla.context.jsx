@@ -14,10 +14,10 @@ export const HSLAContext = createContext({
 });
 
 export const HSLAProvider = ({ children }) => {
-  const [val1, setVal1] = useState(360);
-  const [val2, setVal2] = useState(100);
-  const [val3, setVal3] = useState(100);
-  const [val4, setVal4] = useState(1);
+  const [val1, setVal1] = useState("360");
+  const [val2, setVal2] = useState("100");
+  const [val3, setVal3] = useState("100");
+  const [val4, setVal4] = useState("1");
   const [valNames, setValNames] = useState(['Hue', 'Saturation', 'Lightness', 'Alpha']);
   const [maxVals, setMaxVals] = useState([360,100,100,1.0])
 

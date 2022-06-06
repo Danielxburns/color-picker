@@ -8,12 +8,14 @@
   font-size: calc(10px + 2vmin);
   color:burlywood;
   text-align: center;
+  padding: 5px;
 }
 
 .picker-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .picker {
@@ -33,6 +35,7 @@
   height: 50vmin;
   width: 50vmin;
   background-color: white;
+  margin: 10px;
 }
 
 
@@ -74,9 +77,23 @@
   color: blue;
 }
 
-.slider-container {
+.sliders-container {
   display: flex;
   font-size: calc(10px + 1vmin);
+}
+
+.sliders-container input[type=text] {
+  width: 50px;
+}
+
+.slider-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slider-val-wrapper {
+  display: inline
 }
 
 .App-logo {
