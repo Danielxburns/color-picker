@@ -1,21 +1,24 @@
 import React from 'react';
 
 const Slider = ({ className, name, min, max, step, value, handlechange }) => {
+  
   const increment = () => {
+    value = parseFloat(value);
     if (value >= min && value < max) {
       return className === 'val4'
-        ? (parseFloat(value) + 0.1).toFixed(1)
-        : parseFloat(value) + 1;
+        ? (value + 0.1).toFixed(1)
+        : value + 1;
     } else {
       return value;
     }
   };
 
   const decrement = () => {
+    value = parseFloat(value);
     if (value > min && value <= max) {
       return className === 'val4'
-        ? (parseFloat(value) - 0.1).toFixed(1)
-        : parseFloat(value) - 1;
+        ? (value - 0.1).toFixed(1)
+        : value - 1;
     } else {
       return value;
     }

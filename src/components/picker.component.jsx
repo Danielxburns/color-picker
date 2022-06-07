@@ -54,7 +54,7 @@ const Picker = ({ colorModel }) => {
           name={`${valNames[1]}`}
           min="0"
           max={`${maxVals[1]}`}
-          value={colorModel === 'HSLA' ? val2 + '%' : val2}
+          value={val2}
           handlechange={handleChange}
         ></Slider>
         <Slider
@@ -62,7 +62,7 @@ const Picker = ({ colorModel }) => {
           name={`${valNames[2]}`}
           min="0"
           max={`${maxVals[2]}`}
-          value={colorModel === 'HSLA' ? val3 + '%' : val3}
+          value={val3}
           handlechange={handleChange}
         ></Slider>
         <Slider
