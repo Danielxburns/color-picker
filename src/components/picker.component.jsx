@@ -4,19 +4,17 @@ import Slider from './slider.comp';
 import { RBGAContext } from '../contexts/rgba.context';
 import { HSLAContext } from '../contexts/hsla.context';
 
-
 const Picker = ({ colorModel }) => {
-
   const RGBA_Ctxt = useContext(RBGAContext);
   const HSLA_Ctxt = useContext(HSLAContext);
 
-  const context = (colorModel === 'RGBA') ? RGBA_Ctxt: HSLA_Ctxt;
-
-const { val1, val2, val3, val4 } = context.colorVals;
+  const context = colorModel === 'RGBA' ? RGBA_Ctxt : HSLA_Ctxt;
+  const { colorVals, setColorVals, valNames, maxVals } = context;
+  const { val1, val2, val3, val4 } = colorVals;
 
   const handleChange = (e) => {
     const { className, value } = e.target;
-    context.setColorVals({...context.colorVals, [className]:value});
+    setColorVals({ ...colorVals, [className]: value });
   };
 
   return (
@@ -29,45 +27,49 @@ const { val1, val2, val3, val4 } = context.colorVals;
         <div
           className="viewer-layer"
           style={{
-            backgroundColor: `${colorModel.toLowerCase()}(${val1}, ${(colorModel === 'HSLA')? val2 + '%': val2}, ${(colorModel === 'HSLA')? val3 + '%': val3}, ${val4})`
+            backgroundColor: `${colorModel.toLowerCase()}(${val1}, ${
+              colorModel === 'HSLA' ? val2 + '%' : val2
+            }, ${colorModel === 'HSLA' ? val3 + '%' : val3}, ${val4})`,
           }}
         >
           <p>
-            background-color: {colorModel.toLowerCase()}({val1}, {(colorModel === 'HSLA')? val2 + '%': val2}, {(colorModel === 'HSLA')? val3 + '%': val3}, {val4})
+            background-color: {colorModel.toLowerCase()}({val1},{' '}
+            {colorModel === 'HSLA' ? val2 + '%' : val2},{' '}
+            {colorModel === 'HSLA' ? val3 + '%' : val3}, {val4})
           </p>
         </div>
-        <div className='foreground-layer'></div>
+        <div className="foreground-layer"></div>
       </div>
       <div className="sliders-container">
         <Slider
           className="val1"
-          name={`${context.valNames[0]}`}
+          name={`${valNames[0]}`}
           min="0"
-          max={`${context.maxVals[0]}`}
+          max={`${maxVals[0]}`}
           value={val1}
           handlechange={handleChange}
         ></Slider>
         <Slider
           className="val2"
-          name={`${context.valNames[1]}`}
+          name={`${valNames[1]}`}
           min="0"
-          max={`${context.maxVals[1]}`}
-          value={(colorModel === 'HSLA')? val2 + '%': val2}
+          max={`${maxVals[1]}`}
+          value={colorModel === 'HSLA' ? val2 + '%' : val2}
           handlechange={handleChange}
         ></Slider>
         <Slider
           className="val3"
-          name={`${context.valNames[2]}`}
+          name={`${valNames[2]}`}
           min="0"
-          max={`${context.maxVals[2]}`}
-          value={(colorModel === 'HSLA')? val3 + '%': val3}
+          max={`${maxVals[2]}`}
+          value={colorModel === 'HSLA' ? val3 + '%' : val3}
           handlechange={handleChange}
         ></Slider>
         <Slider
           className="val4"
-          name={`${context.valNames[3]}`}
+          name={`${valNames[3]}`}
           min="0.0"
-          max={`${context.maxVals[3]}`}
+          max={`${maxVals[3]}`}
           step="0.1"
           value={val4}
           handlechange={handleChange}
