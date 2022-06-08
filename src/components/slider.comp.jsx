@@ -41,7 +41,7 @@ const Slider = ({ className, name, min, max, step, value, handlechange }) => {
         min={min}
         max={max}
         step={step}
-        value={parseFloat(value)}
+        value={value}
         onChange={handlechange}
       ></input>
       <div className="slider-val-wrapper">
@@ -56,7 +56,7 @@ const Slider = ({ className, name, min, max, step, value, handlechange }) => {
           type="text"
           id={name + 'Val'}
           className={className}
-          value={parseFloat(value)}
+          value={value}
           onChange={handlechange}
         ></input>
         <button

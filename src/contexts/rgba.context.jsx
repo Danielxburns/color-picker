@@ -1,5 +1,7 @@
 import { createContext, useState } from 'react';
 
+const valNames = ['Red', 'Green', 'Blue', 'Alpha'];
+const maxVals = ['255', '255', '255', '1.0'];
 const defaultColorVals = {
   val1: '255',
   val2: '255',
@@ -16,9 +18,6 @@ export const RBGAContext = createContext({
 
 export const RGBAProvider = ({ children }) => {
   const [colorVals, setColorVals] = useState(defaultColorVals);
-  const valNames = ['Red', 'Green', 'Blue', 'Alpha'];
-  const maxVals = ['255', '255', '255', '1.0'];
-
   const value = { colorVals, setColorVals, valNames, maxVals };
 
   return <RBGAContext.Provider value={value}>{children}</RBGAContext.Provider>;

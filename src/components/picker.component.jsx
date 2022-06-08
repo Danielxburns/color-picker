@@ -9,6 +9,7 @@ const Picker = ({ colorModel }) => {
   const HSLA_Ctxt = useContext(HSLAContext);
 
   const context = colorModel === 'RGBA' ? RGBA_Ctxt : HSLA_Ctxt;
+
   const { colorVals, setColorVals, valNames, maxVals } = context;
   const { val1, val2, val3, val4 } = colorVals;
 
