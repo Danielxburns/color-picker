@@ -49,7 +49,7 @@
   width: 100%;
 }
 
-.viewer-layer {
+.color-layer {
   color: black;
   position: absolute;
   z-index: 1;
@@ -58,7 +58,7 @@
   width: 100%;
 }
 
-.viewer-layer :last-child {
+.color-layer :last-child {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -69,6 +69,7 @@
 .foreground-layer {
   position: absolute;
   top: 0;
+  object-fit: contain;
   display: flex;
   justify-content: center;
   z-index: 2;
@@ -96,12 +97,10 @@
   display: inline
 }
 
-.App-logo {
-  color: red;
+.bg-image {
   height: 40vmin;
   margin-left: auto;
   margin-right: auto;
-  pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {

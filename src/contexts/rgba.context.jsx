@@ -6,7 +6,7 @@ const defaultColorVals = {
   val1: '255',
   val2: '255',
   val3: '0',
-  val4: '0.7',
+  val4: '0.8',
 };
 
 export const RBGAContext = createContext({
