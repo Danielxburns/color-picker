@@ -1,7 +1,7 @@
 const Images = {
   none: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=',
   brick: require('./brick.png'),
-  colorTheory: require('./color-theory.png'),
+  colorTheory: require('./rgb_circles.png'),
   colorWheel: require('./colorwheel.png'),
   dad: require('./dad.png'),
   droplets: require('./droplets.png'),

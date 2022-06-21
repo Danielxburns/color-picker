@@ -115,7 +115,8 @@ const Picker = ({ colorModel }) => {
           <option value="none">None</option>
           <option value="brick">Brick</option>
           <option value="colorTheory">RGB circles</option>
-          <option value="colorWheel">Color wheel</option>
+          <option value="colorWheel">Color wheel</option>{' '}
+          <option value="dad">Dad</option>
           <option value="droplets">Droplets</option>
           <option value="logo">React Logo</option>
           <option value="ripple">Ripple</option>
