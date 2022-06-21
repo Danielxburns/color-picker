@@ -26,7 +26,7 @@ const Picker = ({ colorModel }) => {
       {colorModel} color
       <div className="viewer-container">
         <div className="background-layer">
-          <img src={BGimage.url} className="bg-image" alt="background" />
+          <img src={BGimage.url} className="image" alt="background" />
         </div>{' '}
         <div
           className="color-layer"
@@ -44,7 +44,7 @@ const Picker = ({ colorModel }) => {
         </div>
         <div className="foreground-layer">
           {' '}
-          <img src={FGimage.url} className="fg-image" alt="foreground" />
+          <img src={FGimage.url} className="image" alt="foreground" />
         </div>
       </div>
       <div className="sliders-container">
