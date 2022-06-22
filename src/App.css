@@ -86,3 +86,8 @@
 .slider-val-wrapper {
   display: inline;
 }
+
+.options-container {
+  font-size: calc(10px + 1vmin);
+  padding: 5px;
+}
