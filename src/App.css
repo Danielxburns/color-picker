@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color:burlywood;
+  color: burlywood;
   text-align: center;
   padding: 5px;
 }
@@ -36,9 +36,8 @@
   width: 50vmin;
   background-color: white;
   margin: 10px;
-  overflow:hidden;
+  overflow: hidden;
 }
-
 
 .background-layer {
   position: absolute;
@@ -59,13 +58,6 @@
   width: 100%;
 }
 
-.color-layer :last-child {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  font-size: calc(10px + 1vmin);
-}
-
 .foreground-layer {
   position: absolute;
   top: 0;
@@ -76,16 +68,12 @@
   width: 100%;
 }
 
-/* .image {
-background-size: contain;
-} */
-
 .sliders-container {
   display: flex;
   font-size: calc(10px + 1vmin);
 }
 
-.sliders-container input[type=text] {
+.sliders-container input[type='text'] {
   width: 50px;
 }
 
@@ -96,20 +84,5 @@ background-size: contain;
 }
 
 .slider-val-wrapper {
-  display: inline
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  display: inline;
 }

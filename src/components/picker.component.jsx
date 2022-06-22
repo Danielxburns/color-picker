@@ -5,12 +5,15 @@ import { RBGAContext } from '../contexts/rgba.context';
 import { HSLAContext } from '../contexts/hsla.context';
 
 const Picker = ({ colorModel }) => {
-  const [BGimage, setBGImage] = useState({ name: 'logo', url: Images.logo });
+  const [BGimage, setBGImage] = useState({
+    name: 'rgb_circles',
+    url: Images.rgb_circles,
+  });
   const [FGimage, setFGImage] = useState({ name: 'none', url: Images.none });
+
+  // I need a better way to do this
   const RGBA_Ctxt = useContext(RBGAContext);
   const HSLA_Ctxt = useContext(HSLAContext);
-
-  // need a better way to do this
   const context = colorModel === 'RGBA' ? RGBA_Ctxt : HSLA_Ctxt;
 
   const { colorVals, setColorVals, valNames, maxVals } = context;
@@ -35,13 +38,7 @@ const Picker = ({ colorModel }) => {
               colorModel === 'HSLA' ? val2 + '%' : val2
             }, ${colorModel === 'HSLA' ? val3 + '%' : val3}, ${val4})`,
           }}
-        >
-          <p>
-            CSS color: {colorModel.toLowerCase()}({val1},{' '}
-            {colorModel === 'HSLA' ? val2 + '%' : val2},{' '}
-            {colorModel === 'HSLA' ? val3 + '%' : val3}, {val4})
-          </p>
-        </div>
+        ></div>
         <div className="foreground-layer">
           {' '}
           <img src={FGimage.url} className="image" alt="foreground" />
@@ -94,11 +91,10 @@ const Picker = ({ colorModel }) => {
         >
           <option value="none">None</option>
           <option value="brick">Brick</option>
-          <option value="colorTheory">RGB circles</option>
-          <option value="colorWheel">Color wheel</option>
+          <option value="rgb_circles">RGB circles</option>
+          <option value="colorwheel">Color wheel</option>
           <option value="dad">Dad</option>
           <option value="droplets">Droplets</option>
-          <option value="logo">React Logo</option>
           <option value="ripple">Ripple</option>
           <option value="smoke">Smoke</option>
           <option value="topography">Topography</option>
@@ -114,11 +110,10 @@ const Picker = ({ colorModel }) => {
         >
           <option value="none">None</option>
           <option value="brick">Brick</option>
-          <option value="colorTheory">RGB circles</option>
-          <option value="colorWheel">Color wheel</option>{' '}
+          <option value="rgb_circles">RGB circles</option>
+          <option value="colorwheel">Color wheel</option>{' '}
           <option value="dad">Dad</option>
           <option value="droplets">Droplets</option>
-          <option value="logo">React Logo</option>
           <option value="ripple">Ripple</option>
           <option value="smoke">Smoke</option>
           <option value="topography">Topography</option>
