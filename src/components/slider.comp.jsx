@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Slider = ({ className, name, min, max, step, value, handlechange }) => {
   
   const increment = () => {

@@ -1,6 +1,7 @@
 import { useState, useContext } from 'react';
 import Images from '../assets/images/index';
 import Slider from './slider.comp';
+import ImageSelector from './imageSelector.component';
 import { RBGAContext } from '../contexts/rgba.context';
 import { HSLAContext } from '../contexts/hsla.context';
 
@@ -80,48 +81,8 @@ const Picker = ({ colorModel }) => {
         ></Slider>
       </div>
       <div className="options-container">
-        <label htmlFor="fg-select">Foreground:</label>
-        <select
-          className="fg-select"
-          name="fg-select"
-          value={FGimage.name}
-          onChange={(e) => {
-            setFGImage({ name: e.target.value, url: Images[e.target.value] });
-          }}
-        >
-          <option value="none">None</option>
-          <optgroup label="Images">
-            <option value="rgb_circles">RGB circles</option>
-            <option value="colorwheel">Color wheel</option>
-            <option value="dad">Dad</option>
-          </optgroup>
-          <optgroup label="Textures">
-            <option value="droplets">Droplets</option>
-            <option value="brick">Brick</option>
-            <option value="smoke">Smoke</option>
-            <option value="topography">Topography</option>
-            <option value="ripple">Ripple</option>
-          </optgroup>
-        </select>
-        <label htmlFor="bg-select">Background:</label>
-        <select
-          className="bg-select"
-          name="bg-select"
-          value={BGimage.name}
-          onChange={(e) => {
-            setBGImage({ name: e.target.value, url: Images[e.target.value] });
-          }}
-        >
-          <option value="none">None</option>
-          <option value="brick">Brick</option>
-          <option value="rgb_circles">RGB circles</option>
-          <option value="colorwheel">Color wheel</option>{' '}
-          <option value="dad">Dad</option>
-          <option value="droplets">Droplets</option>
-          <option value="ripple">Ripple</option>
-          <option value="smoke">Smoke</option>
-          <option value="topography">Topography</option>
-        </select>
+          <ImageSelector className="fg-select" label="Foreground" imageName={FGimage.name} setter={setFGImage} />
+          <ImageSelector className="bg-select" label="Background" imageName={BGimage.name} setter={setBGImage} />
       </div>
     </div>
   );
