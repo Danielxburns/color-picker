@@ -29,7 +29,7 @@ const Picker = ({ colorModel }) => {
       {colorModel} color
       <div className="viewer-container">
         <div className="background-layer">
-          <img src={BGimage.url} className="image" alt="background" />
+          <img src={BGimage.url} className="image" alt={BGimage.name} />
         </div>{' '}
         <div
           className="color-layer"
@@ -41,7 +41,7 @@ const Picker = ({ colorModel }) => {
         ></div>
         <div className="foreground-layer">
           {' '}
-          <img src={FGimage.url} className="image" alt="foreground" />
+          <img src={FGimage.url} className="image" alt={FGimage.name} />
         </div>
       </div>
       <div className="sliders-container">
@@ -90,14 +90,18 @@ const Picker = ({ colorModel }) => {
           }}
         >
           <option value="none">None</option>
-          <option value="brick">Brick</option>
-          <option value="rgb_circles">RGB circles</option>
-          <option value="colorwheel">Color wheel</option>
-          <option value="dad">Dad</option>
-          <option value="droplets">Droplets</option>
-          <option value="ripple">Ripple</option>
-          <option value="smoke">Smoke</option>
-          <option value="topography">Topography</option>
+          <optgroup label="Images">
+            <option value="rgb_circles">RGB circles</option>
+            <option value="colorwheel">Color wheel</option>
+            <option value="dad">Dad</option>
+          </optgroup>
+          <optgroup label="Textures">
+            <option value="droplets">Droplets</option>
+            <option value="brick">Brick</option>
+            <option value="smoke">Smoke</option>
+            <option value="topography">Topography</option>
+            <option value="ripple">Ripple</option>
+          </optgroup>
         </select>
         <label htmlFor="bg-select">Background:</label>
         <select

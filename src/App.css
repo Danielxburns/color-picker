@@ -68,6 +68,10 @@
   width: 100%;
 }
 
+.image {
+  object-fit: contain;
+}
+
 .sliders-container {
   display: flex;
   font-size: calc(10px + 1vmin);
