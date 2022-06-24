@@ -1,4 +1,12 @@
-const Controller = ({ className, name, min, max, step, value, handlechange }) => {
+const Controller = ({
+  className,
+  name,
+  min,
+  max,
+  step,
+  value,
+  handlechange,
+}) => {
   const increment = () => {
     value = parseFloat(value);
     if (value >= min && value < max) {
@@ -24,30 +32,32 @@ const Controller = ({ className, name, min, max, step, value, handlechange }) =>
         id={'label-for-' + name}
         style={{ display: 'block' }}
       >
-        {name[0]}:{' '}
+        {name}:{' '}
       </label>
-      <input
-        type="text"
-        id={name + 'Val'}
-        className={className}
-        value={value}
-        onChange={handlechange}
-      ></input>
-      <div className="button-wrapper">
-        <button
+      <div className="input-wrapper">
+        <input
+          type="number"
+          id={name + 'Val'}
           className={className}
-          value={increment()}
-          onClick={handlechange}
-        >
-          &#9650;
-        </button>
-        <button
-          className={className}
-          value={decrement()}
-          onClick={handlechange}
-        >
-          &#9660;
-        </button>
+          value={value}
+          onChange={handlechange}
+        ></input>
+        <div className="button-wrapper">
+          <button
+            className={className}
+            value={increment()}
+            onClick={handlechange}
+          >
+            &#9650;
+          </button>
+          <button
+            className={className}
+            value={decrement()}
+            onClick={handlechange}
+          >
+            &#9660;
+          </button>
+        </div>
       </div>
       <input
         type="range"
