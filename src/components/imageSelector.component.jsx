@@ -1,4 +1,4 @@
-import Images from '../assets/images/index';
+import Images from '../assets/images/index.images';
 
 const ImageSelector = ({ className, label, imageName, setter }) => {
   return (

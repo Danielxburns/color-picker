@@ -1,6 +1,6 @@
 import { useState, useContext } from 'react';
-import Images from '../assets/images/index';
-import Slider from './slider.comp';
+import Images from '../assets/images/index.images';
+import Controller from './controller';
 import ImageSelector from './imageSelector.component';
 import { RBGAContext } from '../contexts/rgba.context';
 import { HSLAContext } from '../contexts/hsla.context';
@@ -45,32 +45,32 @@ const Picker = ({ colorModel }) => {
           <img src={FGimage.url} className="image" alt={FGimage.name} />
         </div>
       </div>
-      <div className="sliders-container">
-        <Slider
+      <div className="controllers-container">
+        <Controller
           className="val1"
           name={`${valNames[0]}`}
           min="0"
           max={`${maxVals[0]}`}
           value={val1}
           handlechange={handleChange}
-        ></Slider>
-        <Slider
+        ></Controller>
+        <Controller
           className="val2"
           name={`${valNames[1]}`}
           min="0"
           max={`${maxVals[1]}`}
           value={val2}
           handlechange={handleChange}
-        ></Slider>
-        <Slider
+        ></Controller>
+        <Controller
           className="val3"
           name={`${valNames[2]}`}
           min="0"
           max={`${maxVals[2]}`}
           value={val3}
           handlechange={handleChange}
-        ></Slider>
-        <Slider
+        ></Controller>
+        <Controller
           className="val4"
           name={`${valNames[3]}`}
           min="0.0"
@@ -78,7 +78,7 @@ const Picker = ({ colorModel }) => {
           step="0.1"
           value={val4}
           handlechange={handleChange}
-        ></Slider>
+        ></Controller>
       </div>
       <div className="options-container">
           <ImageSelector className="fg-select" label="Foreground" imageName={FGimage.name} setter={setFGImage} />

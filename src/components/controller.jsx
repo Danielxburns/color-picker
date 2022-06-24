@@ -1,11 +1,8 @@
-const Slider = ({ className, name, min, max, step, value, handlechange }) => {
-  
+const Controller = ({ className, name, min, max, step, value, handlechange }) => {
   const increment = () => {
     value = parseFloat(value);
     if (value >= min && value < max) {
-      return className === 'val4'
-        ? (value + 0.1).toFixed(1)
-        : value + 1;
+      return className === 'val4' ? (value + 0.1).toFixed(1) : value + 1;
     } else {
       return value;
     }
@@ -14,23 +11,44 @@ const Slider = ({ className, name, min, max, step, value, handlechange }) => {
   const decrement = () => {
     value = parseFloat(value);
     if (value > min && value <= max) {
-      return className === 'val4'
-        ? (value - 0.1).toFixed(1)
-        : value - 1;
+      return className === 'val4' ? (value - 0.1).toFixed(1) : value - 1;
     } else {
       return value;
     }
   };
 
   return (
-    <div className="slider-wrapper">
+    <div className="controller-wrapper">
       <label
         htmlFor={name}
         id={'label-for-' + name}
         style={{ display: 'block' }}
       >
-        {name}:{' '}
+        {name[0]}:{' '}
       </label>
+      <input
+        type="text"
+        id={name + 'Val'}
+        className={className}
+        value={value}
+        onChange={handlechange}
+      ></input>
+      <div className="button-wrapper">
+        <button
+          className={className}
+          value={increment()}
+          onClick={handlechange}
+        >
+          &#9650;
+        </button>
+        <button
+          className={className}
+          value={decrement()}
+          onClick={handlechange}
+        >
+          &#9660;
+        </button>
+      </div>
       <input
         type="range"
         className={className}
@@ -42,31 +60,8 @@ const Slider = ({ className, name, min, max, step, value, handlechange }) => {
         value={value}
         onChange={handlechange}
       ></input>
-      <div className="slider-val-wrapper">
-        <button
-          className={className}
-          value={decrement()}
-          onClick={handlechange}
-        >
-          &#10094;
-        </button>
-        <input
-          type="text"
-          id={name + 'Val'}
-          className={className}
-          value={value}
-          onChange={handlechange}
-        ></input>
-        <button
-          className={className}
-          value={increment()}
-          onClick={handlechange}
-        >
-          &#10095;
-        </button>
-      </div>
     </div>
   );
 };
 
-export default Slider;
+export default Controller;

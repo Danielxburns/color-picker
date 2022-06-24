@@ -5,7 +5,7 @@ function App() {
 
   return (
     <div className="App">
-      <p>Color Picker</p>
+      <p>Transparency Color Picker</p>
       <div className="picker-container">
         <Picker colorModel={'RGBA'}/>
         <Picker colorModel={'HSLA'}/>

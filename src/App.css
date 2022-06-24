@@ -25,7 +25,7 @@
   margin: 5px;
   padding: 10px;
   border: 2px solid burlywood;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .viewer-container {
@@ -72,23 +72,29 @@
   object-fit: contain;
 }
 
-.sliders-container {
+.controllers-container {
   display: flex;
   font-size: calc(10px + 1vmin);
 }
 
-.sliders-container input[type='text'] {
-  width: 50px;
-}
-
-.slider-wrapper {
+.controller-wrapper {
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
-.slider-val-wrapper {
-  display: inline;
+.controller-wrapper input[type='text'] {
+  width: 40px;
+  height: 20px;
+}
+
+.controller-wrapper .button-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.controller-wrapper input[type='range'] {
+  width: 100px;
+  transform: rotate(270deg);
 }
 
 .options-container {
