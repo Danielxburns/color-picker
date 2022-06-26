@@ -62,6 +62,7 @@
   position: absolute;
   top: 0;
   display: flex;
+  align-items: center;
   justify-content: center;
   z-index: 2;
   height: 100%;
@@ -70,6 +71,7 @@
 
 .image {
   object-fit: contain;
+  max-width: 100%;
 }
 
 .controllers-container {

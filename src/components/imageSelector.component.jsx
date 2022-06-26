@@ -16,6 +16,7 @@ const ImageSelector = ({ className, label, imageName, setter }) => {
         <optgroup label="Images">
           <option value="rgb_circles">RGB circles</option>
           <option value="colorwheel">Color wheel</option>
+          <option value="greyscale">Grey scale</option>
           <option value="dad">Dad</option>
         </optgroup>
         <optgroup label="Textures">

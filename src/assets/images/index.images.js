@@ -5,6 +5,7 @@ const Images = {
   colorwheel: require('./colorwheel.png'),
   dad: require('./dad.png'),
   droplets: require('./droplets.png'),
+  greyscale: require('./greyscale.png'),
   ripple: require('./ripple.png'),
   smoke: require('./smoke.png'),
   topography: require('./topography.png'),
