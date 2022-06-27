@@ -81,8 +81,18 @@ const Picker = ({ colorModel }) => {
         ></Controller>
       </div>
       <div className="options-container">
-          <ImageSelector className="fg-select" label="Foreground" imageName={FGimage.name} setter={setFGImage} />
-          <ImageSelector className="bg-select" label="Background" imageName={BGimage.name} setter={setBGImage} />
+        <ImageSelector
+          className="fg-select"
+          label="Foreground"
+          imageName={FGimage.name}
+          setter={setFGImage}
+        />
+        <ImageSelector
+          className="bg-select"
+          label="Background"
+          imageName={BGimage.name}
+          setter={setBGImage}
+        />
       </div>
     </div>
   );
