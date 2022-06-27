@@ -94,7 +94,8 @@
 }
 
 .input-wrapper input[type='number'] {
-  width: 40px;
+  min-width: 8vw;
+  max-width: 10vw;
   height: 20px;
 }
 
@@ -112,10 +113,11 @@ input::-webkit-inner-spin-button {
 .button-wrapper button {
   height: 13px;
   font-size: 1vmin;
+  min-width: 2vw;
 }
 
 .controller-wrapper input[type='range'] {
-  width: 100px;
+  width: 100%;
 }
 
 .options-container {
