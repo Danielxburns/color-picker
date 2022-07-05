@@ -8,7 +8,7 @@ const Images = {
   droplets: require('./droplets.png'),
   greyscale: require('./greyscale.png'),
   ripples: require('./ripples.png'),
-  smoke: require('./smoke.png'),
+  cloud: require('./smoke.png'),
   topography: require('./topography.png'),
 };
 
