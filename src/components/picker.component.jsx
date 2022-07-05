@@ -1,9 +1,9 @@
 import { useState, useContext } from 'react';
 import Images from '../assets/images/index.images';
+import InitialValues from '../assets/intialValues';
 import Controller from './controller';
 import ImageSelector from './imageSelector.component';
-import { RBGAContext } from '../contexts/rgba.context';
-import { HSLAContext } from '../contexts/hsla.context';
+import { ColorContext } from '../contexts/color.context';
 
 const Picker = ({ colorModel }) => {
   const [BGimage, setBGImage] = useState({
@@ -12,13 +12,11 @@ const Picker = ({ colorModel }) => {
   });
   const [FGimage, setFGImage] = useState({ name: 'none', url: Images.none });
 
-  // I need a better way to do this
-  const RGBA_Ctxt = useContext(RBGAContext);
-  const HSLA_Ctxt = useContext(HSLAContext);
-  const context = colorModel === 'RGBA' ? RGBA_Ctxt : HSLA_Ctxt;
-
-  const { colorVals, setColorVals, valNames, maxVals } = context;
+  const context = useContext(ColorContext);
+  const colorVals = context[`${colorModel.toLowerCase()}Vals`];
+  const setColorVals = context[`set${colorModel}Vals`];
   const { val1, val2, val3, val4 } = colorVals;
+  const { valNames, maxVals } = InitialValues[colorModel];
 
   const handleChange = (e) => {
     const { className, value } = e.target;
