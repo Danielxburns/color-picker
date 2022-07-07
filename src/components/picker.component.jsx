@@ -1,20 +1,16 @@
-import { useState, useContext } from 'react';
-import Images from '../assets/images/index.images';
-import InitialValues from '../assets/intialValues';
-import Controller from './controller';
-import ImageSelector from './imageSelector.component';
+import { useContext } from 'react';
+import { ImagesContext } from '../contexts/images.context';
 import { ColorContext } from '../contexts/color.context';
+import Controller from './controller.component';
+import ImageSelector from './imageSelector.component';
+import InitialValues from '../assets/intialValues';
 
 const Picker = ({ colorModel }) => {
-  const [BGimage, setBGImage] = useState({
-    name: 'rgb_circles',
-    url: Images.rgb_circles,
-  });
-  const [FGimage, setFGImage] = useState({ name: 'none', url: Images.none });
+  const { fg, setFg, bg, setBg } = useContext(ImagesContext);
 
-  const context = useContext(ColorContext);
-  const colorVals = context[`${colorModel.toLowerCase()}Vals`];
-  const setColorVals = context[`set${colorModel}Vals`];
+  const colorContext = useContext(ColorContext);
+  const colorVals = colorContext[`${colorModel.toLowerCase()}Vals`];
+  const setColorVals = colorContext[`set${colorModel}Vals`];
   const { val1, val2, val3, val4 } = colorVals;
   const { valNames, maxVals } = InitialValues[colorModel];
 
@@ -28,7 +24,7 @@ const Picker = ({ colorModel }) => {
       {colorModel} color
       <div className="viewer-container">
         <div className="background-layer">
-          <img src={BGimage.url} className="image" alt={BGimage.name} />
+          <img src={bg.url} className="image" alt={bg.name} />
         </div>{' '}
         <div
           className="color-layer"
@@ -40,7 +36,7 @@ const Picker = ({ colorModel }) => {
         ></div>
         <div className="foreground-layer">
           {' '}
-          <img src={FGimage.url} className="image" alt={FGimage.name} />
+          <img src={fg.url} className="image" alt={fg.name} />
         </div>
       </div>
       <div className="controllers-container">
@@ -82,14 +78,14 @@ const Picker = ({ colorModel }) => {
         <ImageSelector
           className="fg-select"
           label="Foreground"
-          imageName={FGimage.name}
-          setter={setFGImage}
+          imageName={fg.name}
+          setter={setFg}
         />
         <ImageSelector
           className="bg-select"
           label="Background"
-          imageName={BGimage.name}
-          setter={setBGImage}
+          imageName={bg.name}
+          setter={setBg}
         />
       </div>
     </div>

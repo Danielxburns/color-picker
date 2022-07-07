@@ -1,6 +1,13 @@
-import Images from '../assets/images/index.images';
+import { useContext } from 'react';
+import { ImagesContext } from '../contexts/images.context';
 
 const ImageSelector = ({ className, label, imageName, setter }) => {
+  const { images } = useContext(ImagesContext);
+
+  const handleChange = (e) => {
+    setter({ name: e.target.value, url: images[e.target.value] });
+  };
+
   return (
     <div>
       <label htmlFor={className}>{label}:</label>
@@ -8,13 +15,13 @@ const ImageSelector = ({ className, label, imageName, setter }) => {
         className={className}
         name={className}
         value={imageName}
-        onChange={(e) => {
-          setter({ name: e.target.value, url: Images[e.target.value] });
-        }}
+        onChange = {handleChange}
       >
-        {Object.keys(Images).map(key=>
-          <option value={key} key={key}>{key}</option>
-        )}
+        {Object.keys(images).map((key) => (
+          <option value={key} key={key}>
+            {key}
+          </option>
+        ))}
       </select>
     </div>
   );
