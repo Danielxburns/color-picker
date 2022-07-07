@@ -4,7 +4,7 @@ import { ImagesContext } from '../contexts/images.context';
 const ImageSelector = ({ className, label, imageName, setter }) => {
   const { images } = useContext(ImagesContext);
 
-  const handleChange = (e) => {
+  const handleImageChange = (e) => {
     setter({ name: e.target.value, url: images[e.target.value] });
   };
 
@@ -15,7 +15,7 @@ const ImageSelector = ({ className, label, imageName, setter }) => {
         className={className}
         name={className}
         value={imageName}
-        onChange = {handleChange}
+        onChange={handleImageChange}
       >
         {Object.keys(images).map((key) => (
           <option value={key} key={key}>
