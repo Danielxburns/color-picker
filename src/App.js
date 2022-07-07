@@ -1,5 +1,6 @@
 import './App.css';
 import Picker from './components/picker.component';
+import { ImagesProvider } from './contexts/images.context';
 
 function App() {
 
@@ -7,8 +8,12 @@ function App() {
     <div className="App">
       <p>Transparency Color Picker</p>
       <div className="picker-container">
-        <Picker colorModel={'RGBA'}/>
-        <Picker colorModel={'HSLA'}/>
+        <ImagesProvider>
+          <Picker colorModel={'RGBA'}/>
+        </ImagesProvider>
+        <ImagesProvider>
+          <Picker colorModel={'HSLA'}/>
+        </ImagesProvider>
       </div>
     </div>
   );

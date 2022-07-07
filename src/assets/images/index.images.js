@@ -10,6 +10,7 @@ const Images = {
   ripples: require('./ripples.png'),
   cloud: require('./smoke.png'),
   topography: require('./topography.png'),
+  city: require('./city.png'),
 };
 
 export default Images;
