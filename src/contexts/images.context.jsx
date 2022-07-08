@@ -17,6 +17,9 @@ export const ImagesProvider = ({ children }) => {
     url: Images.rgb_circles,
   });
   const [images, setImages] = useState({ ...Images });
+  
+
+
   const value = { fg, setFg, bg, setBg, images, setImages };
 
   return (

@@ -6,7 +6,7 @@ import ImageSelector from './imageSelector.component';
 import InitialValues from '../assets/intialValues';
 
 const Picker = ({ colorModel }) => {
-  const { fg, setFg, bg, setBg } = useContext(ImagesContext);
+  const { fg, setFg, bg, setBg, images, setImages } = useContext(ImagesContext);
 
   const colorContext = useContext(ColorContext);
   const colorVals = colorContext[`${colorModel.toLowerCase()}Vals`];
@@ -18,6 +18,13 @@ const Picker = ({ colorModel }) => {
     const { className, value } = e.target;
     setColorVals({ ...colorVals, [className]: value });
   };
+
+  const addImage = () => {
+    const imageURL = prompt("image URL");
+    const imageName = prompt("name of image");
+    setImages({ ...images, [imageName]: imageURL });
+    setFg({name: imageName, url: imageURL});
+  }
 
   return (
     <div className="picker">
@@ -87,6 +94,7 @@ const Picker = ({ colorModel }) => {
           imageName={bg.name}
           setter={setBg}
         />
+        <button className='add-image' onClick={addImage}>Add your own Image</button>
       </div>
     </div>
   );
