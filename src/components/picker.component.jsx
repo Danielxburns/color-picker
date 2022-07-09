@@ -22,8 +22,10 @@ const Picker = ({ colorModel }) => {
   const addImage = () => {
     const imageURL = prompt("image URL");
     const imageName = prompt("name of image");
-    setImages({ ...images, [imageName]: imageURL });
-    setFg({name: imageName, url: imageURL});
+    if (imageURL && imageName) {
+      setImages({ ...images, [imageName]: imageURL });
+      setFg({name: imageName, url: imageURL});
+    }
   }
 
   return (
