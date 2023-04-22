@@ -1,15 +1,18 @@
 # Daniel’s Color Tool
 
 A web app to help understand RGBA and HSLA color models
- - Improve understanding of color relations
+ - Improve understanding of how color works on the web
  - Compare differences in RGBA and HSLA color models
  - Explore the effects of transparency layers on images
  - Includes preloaded utility images and transparent PNG textures
 
 ## Link
 
+[Screenshot](myProjects/color-picker/public/danielscolorpicker.netlify.app_.png?raw=true)
+
 [https://danielscolorpicker.netlify.app/ ](https://danielscolorpicker.netlify.app/ )
 
+[Presentation Video](https://youtu.be/tl-bVxbQsSU)
 
 ## Tech Stack
 
@@ -24,6 +27,7 @@ To deploy this project simply push to main branch and Netlify will do the rest. 
 
 ## Roadmap
 
+- Add option groups to seperate images from textures
 - Add your own image dropdown lists
 - Switch from RGBA to HSLA with click of a button
 - Add color picker tool to identify color values at specific locations
