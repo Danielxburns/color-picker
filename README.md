@@ -4,6 +4,7 @@ A web app to help understand RGBA and HSLA color models
  - Improve understanding of color relations
  - Compare differences in RGBA and HSLA color models
  - Explore the effects of transparency layers on images
+ - Includes preloaded utility images and transparent PNG textures
 
 ## Link
 
@@ -21,6 +22,12 @@ To deploy this project simply push to main branch and Netlify will do the rest. 
 [![Build Status](https://badges.netlify.com/api/danielscolorpicker.svg?branch=main)](https://app.netlify.com/sites/danielscolorpicker/deploys)
 
 
+## Roadmap
+
+- Add your own image dropdown lists
+- Switch from RGBA to HSLA with click of a button
+- Add color picker tool to identify color values at specific locations
+- copy values to clipboard
 
 ## License
 
