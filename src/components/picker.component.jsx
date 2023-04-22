@@ -23,8 +23,9 @@ const Picker = ({ colorModel }) => {
     const imageURL = prompt("image URL");
     const imageName = prompt("name of image");
     if (imageURL && imageName) {
-      setImages({ ...images, [imageName]: imageURL });
-      setFg({name: imageName, url: imageURL});
+      setImages({ ...images, ...{name: imageName, url: imageURL} });
+      setFg({[imageName]: imageURL});
+      //localStorage.setItem('userImages', JSON.stringify({[imageName]: imageURL}));
     }
   }
 
@@ -96,7 +97,7 @@ const Picker = ({ colorModel }) => {
           imageName={bg.name}
           setter={setBg}
         />
-        <button className='add-image' onClick={addImage}>Add your own Image</button>
+       {/*  <button className='add-image' onClick={addImage}>Add your own Image</button> */}
       </div>
     </div>
   );
