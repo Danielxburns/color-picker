@@ -8,7 +8,7 @@ A web app to help understand RGBA and HSLA color models
 
 ## Link
 
-[Screenshot](myProjects/color-picker/public/danielscolorpicker.netlify.app_.png?raw=true)
+![Screenshot](myProjects/color-picker/public/danielscolorpicker.netlify.app_.png?raw=true)
 
 [https://danielscolorpicker.netlify.app/ ](https://danielscolorpicker.netlify.app/ )
 
