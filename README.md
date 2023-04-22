@@ -6,11 +6,15 @@ A web app to help understand RGBA and HSLA color models
  - Explore the effects of transparency layers on images
  - Includes preloaded utility images and transparent PNG textures
 
-## Link
+## Screenshot
 
 ![Screenshot](https://github.com/Danielxburns/color-picker/blob/main/public/danielscolorpicker.netlify.app_.png?raw=true)
 
+## Link
+
 [https://danielscolorpicker.netlify.app/ ](https://danielscolorpicker.netlify.app/ )
+
+## Video
 
 [Presentation Video](https://youtu.be/tl-bVxbQsSU)
 
