@@ -6,7 +6,7 @@ import ImageSelector from './imageSelector.component';
 import InitialValues from '../assets/intialValues';
 
 const Picker = ({ colorModel }) => {
-  const { fg, setFg, bg, setBg, images, setImages } = useContext(ImagesContext);
+  const { fg, setFg, bg, setBg, /* images, setImages */ } = useContext(ImagesContext);
 
   const colorContext = useContext(ColorContext);
   const colorVals = colorContext[`${colorModel.toLowerCase()}Vals`];
@@ -19,7 +19,7 @@ const Picker = ({ colorModel }) => {
     setColorVals({ ...colorVals, [className]: value });
   };
 
-  const addImage = () => {
+/*   const addImage = () => {
     const imageURL = prompt("image URL");
     const imageName = prompt("name of image");
     if (imageURL && imageName) {
@@ -27,7 +27,7 @@ const Picker = ({ colorModel }) => {
       setFg({[imageName]: imageURL});
       //localStorage.setItem('userImages', JSON.stringify({[imageName]: imageURL}));
     }
-  }
+  } */
 
   return (
     <div className="picker">
