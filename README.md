@@ -19,7 +19,7 @@ A web app to help understand RGBA and HSLA color models
 
 To deploy this project simply push to main branch and Netlify will do the rest. Requires approval.
 
-[![Build Status](https://badges.netlify.com/api/danielscolorpicker.svg?branch=main)](https://app.netlify.com/sites/danielscolorpicker/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/303f3a01-aaff-46d8-b7a6-6554dd0f0e73/deploy-status?branch=main)](https://app.netlify.com/sites/danielscolorpicker/deploys)
 
 
 ## Roadmap
