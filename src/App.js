@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div className="App">
-      <p>Color Tool</p>
+      <p>Daniel's Color Tool</p>
       <div className="picker-container">
         <ImagesProvider>
           <Picker colorModel={'RGBA'}/>
