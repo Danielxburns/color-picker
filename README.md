@@ -16,7 +16,7 @@ A web app to help understand RGBA and HSLA color models
 
 ## Video
 
-![Presentation Video](https://youtu.be/tl-bVxbQsSU)
+[Presentation Video](https://youtu.be/tl-bVxbQsSU)
 
 ## Tech Stack
 
