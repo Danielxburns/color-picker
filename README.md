@@ -18,23 +18,23 @@ A web app to help understand RGBA and HSLA color models
 
 ![0-ui](https://user-images.githubusercontent.com/41316262/233858414-b326bbc3-4551-48a3-98e6-b9a61c6d069d.png)
 *General UI*  
-![1-slider](https://user-images.githubusercontent.com/41316262/233858497-80b8cea3-d1a9-45cf-b5f0-232ab3569c23.JPEG)
+![1-slider](https://user-images.githubusercontent.com/41316262/233862288-29685ce8-4dc6-422e-8bce-a406d839ef64.JPEG)
 *Use sliders, text input or buttons to adjust values*  
-![2-add-forground](https://user-images.githubusercontent.com/41316262/233858448-377b00c4-e456-4667-8919-56b3966f0f57.jpeg)
+![2-add-forground](https://user-images.githubusercontent.com/41316262/233862314-1d6436f1-758f-4053-ae86-d61fc41a8bf4.jpeg)
 *Try a foreground image*  
-![3-match-bg](https://user-images.githubusercontent.com/41316262/233858465-4f039c61-be14-44ee-99be-436d7a58c69e.JPEG)
+![3-match-bg](https://user-images.githubusercontent.com/41316262/233862326-c996d5c0-5dfc-481d-8d73-b371d9caf566.JPEG)
 *Match a color to make it disappear*  
-![4-transparency-over-bg](https://user-images.githubusercontent.com/41316262/233858469-0e44a85d-a95c-4357-b926-931a433e4471.JPEG)
+![4-transparency-over-bg](https://user-images.githubusercontent.com/41316262/233862331-1513ca31-1135-489a-a5ca-e801506935e3.JPEG)
 *Use Alpha to adjust the opacity*  
-![5-match-the-section-with-alpha](https://user-images.githubusercontent.com/41316262/233858514-f90e0af0-effb-4733-9258-03cda6062207.JPEG)
+![5-match-the-section-with-alpha](https://user-images.githubusercontent.com/41316262/233862348-86fe7188-d1b9-4890-8193-e6e90570a609.JPEG)
 *Which section of the red slice matches*  
-![6-how-hue-works](https://user-images.githubusercontent.com/41316262/233858530-eabff599-f761-4e11-ba91-8d87a16efd48.JPEG)
+![6-how-hue-works](https://user-images.githubusercontent.com/41316262/233862374-72a8f9f4-ae4c-4cad-b9a9-8e84c33fb623.JPEG)
 *Use this color wheel to see how hue works*  
-![7-saturation-how-grey-is-blue](https://user-images.githubusercontent.com/41316262/233858538-ff3fde5c-0d24-474a-bdc0-1a162af02e28.JPEG)
+![7-saturation-how-grey-is-blue](https://user-images.githubusercontent.com/41316262/233862737-ca9b15a1-a9f4-479b-b74f-0184db860421.JPEG)
 *How grey is blue? De-saturate to find out*  
-![8-texture-with-transparent-PNGs](https://user-images.githubusercontent.com/41316262/233858561-1ea9649e-4dab-4c10-9eca-712486efa191.JPEG)
+![8-texture-with-transparent-PNGs](https://user-images.githubusercontent.com/41316262/233862792-3f680189-8467-4378-bd5d-fb95443a98ce.JPEG)
 *Try a transparent PNG*  
-![9-have-fun](https://user-images.githubusercontent.com/41316262/233858681-84283ada-6a33-452f-acbb-61372287e40a.JPEG)
+![9-have-fun](https://user-images.githubusercontent.com/41316262/233862815-72d48876-8a54-4c13-867b-5c95103e419a.JPEG)
 *Have fun!*  
 
 
