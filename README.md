@@ -61,10 +61,10 @@ To deploy this project simply push to main branch and Netlify will do the rest. 
 ## Roadmap
 
 - Add option groups to seperate images from textures
-- Add your own image dropdown lists
-- Switch from RGBA to HSLA with click of a button
+- Add your own image to dropdown lists. Persist them in local storage
+- Switch from RGBA to HSLA with click of a button. automatically translate the values
 - Add color picker tool to identify color values at specific locations
-- copy values to clipboard
+- copy values to clipboard. 
 
 ## License
 
