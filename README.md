@@ -32,16 +32,16 @@ A web app to help understand RGBA and HSLA color models
 *Use Alpha to adjust the opacity*  
 
 ![5-match-the-section-with-alpha](https://user-images.githubusercontent.com/41316262/233862348-86fe7188-d1b9-4890-8193-e6e90570a609.JPEG)
-*Which section of the red slice matches*  
+*Which section of the red slice matches the backgound?*  
 
 ![6-how-hue-works](https://user-images.githubusercontent.com/41316262/233862374-72a8f9f4-ae4c-4cad-b9a9-8e84c33fb623.JPEG)
-*Use this color wheel to see how hue works*  
+*Try out HSLA. Use this color wheel to see how hue works*  
 
 ![7-saturation-how-grey-is-blue](https://user-images.githubusercontent.com/41316262/233862737-ca9b15a1-a9f4-479b-b74f-0184db860421.JPEG)
 *How grey is blue? De-saturate to find out*  
 
 ![8-texture-with-transparent-PNGs](https://user-images.githubusercontent.com/41316262/233862792-3f680189-8467-4378-bd5d-fb95443a98ce.JPEG)
-*Try a transparent PNG*  
+*Try a transparent PNG background*  
 
 ![9-have-fun](https://user-images.githubusercontent.com/41316262/233862815-72d48876-8a54-4c13-867b-5c95103e419a.JPEG)
 *Have fun!*  
